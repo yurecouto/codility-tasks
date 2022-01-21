@@ -3,18 +3,14 @@ def solution(N):
     ones = []
     gaps = []
 
-    for i in range(len(binary)):            # this for loop separates the number ones by theis positions                             
-        if binary[i] == '1':                # then I'm able to see the the size of the gap
+    for i in range(len(binary)):            # Esse loop separa os numeros '1' por suas posições                            
+        if binary[i] == '1':                # e a partir dessas posições é possível ver o tamanho dos gaps
             ones.append(i)
 
-    for j in range(len(ones) - 1):          # Now the idea is to invert the list, so i could subtract two of them
-        gap = ones[j+1] - (ones[j] + 1)     # returning the number of zeros (the gap) between two ones
+    for j in range(len(ones) - 1):          # Agora a ideia é subtrair as posições, a primeira e a segunda, a segunda e a terceira...
+        gap = ones[j + 1] - (ones[j] + 1)   # isso irá retornar o tamanho do gap.
 
         gaps.append(gap)
-        
-    print(binary)
-    print(ones)
-    print(gaps)
 
     if gaps == []:
         return 0

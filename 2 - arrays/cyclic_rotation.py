@@ -1,12 +1,12 @@
 def solution(A, K):
-    for i in range(0, K):       # will perform K iterations of the below code
-        if A == []:             # check if list is empty
-            return A            # return A if A is the empty list
+    for i in range(0, K):       # esse loope irá fazer K rotações ciclicas em A
+        if A == []:             # checa se a lista estiver vazia
+            return A            # retorna a lista caso seja vazia
                         
-        A.insert(0, A.pop())    # inserts at the first index of A the last element of A
+        A.insert(0, A.pop())    # insere no primeiro indice de A o ultimo elemento de A
         
-    return A                    # will return the list A
+    return A                    # retorna A após as rotações K
 
 test = [1, 2, 3, 4]
 
-print(solution(test, 4))
+print(solution(test, 3))
