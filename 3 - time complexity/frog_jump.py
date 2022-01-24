@@ -1,9 +1,7 @@
-# the hole code is about to verify if the built in function round makes the number bigger of smaller than it needs to be
-
 def solution(X, Y, D):
-    difference = (Y - X)
-    float_s = difference / D            
-    round_s = round(difference / D)
+    difference = (Y - X)                # A diferença é a distancia que falta para que o sapo atravesse
+    float_s = difference / D            # Essa diferença é um numero flutuante muitas das vezes
+    round_s = round(difference / D)     # esta variável retorna um numero arredondado
     
     if float_s > round_s:
         solution = round_s + 1
